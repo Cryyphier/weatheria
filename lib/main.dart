@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:weatheria/ui/get_started.dart';
-import 'package:weatheria/ui/home_page.dart';
 
 void main() {
   runApp(const MyApp());

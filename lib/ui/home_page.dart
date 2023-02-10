@@ -335,7 +335,7 @@ class _HomePageState extends State<HomePage> {
                         'Today',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 20,
                         ),
                       ),
                       GestureDetector(
@@ -347,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                           'Forecasts',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 16,
+                            fontSize: 20,
                             color: _constants.primaryColor,
                           ),
                         ),
@@ -387,8 +387,8 @@ class _HomePageState extends State<HomePage> {
                                 .round()
                                 .toString();
                         return Container(
-                            padding: const EdgeInsets.only(right: 15),
-                            margin: const EdgeInsets.only(right: 20),
+                            padding: const EdgeInsets.only(right: 10),
+                            margin: const EdgeInsets.only(right: 15),
                             width: 65,
                             decoration: BoxDecoration(
                               color: currentHour == forecastHour ? Colors.white : _constants.primaryColor,
@@ -403,13 +403,14 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(forecastTime, style: TextStyle(
-                                    fontSize: 17,
+                                    fontSize: 15,
                                     color: _constants.greyColor,
                                     fontWeight: FontWeight.w500,
                                   ),),
-                                Image.asset('assets/' + forecastWeatherIcon, width: 20,),
+                                Image.asset('assets/' + forecastWeatherIcon, width: 25,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -417,15 +418,15 @@ class _HomePageState extends State<HomePage> {
                                       forecastTemperature,
                                       style: TextStyle(
                                         color: _constants.greyColor,
-                                        fontSize: 15,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                    Text('o',
+                                    Text('°',
                                         style: TextStyle(
                                             color: _constants.greyColor,
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 17,
+                                            fontSize: 10,
                                             fontFeatures: const [
                                               FontFeature.enable('sups'),
                                             ])),
